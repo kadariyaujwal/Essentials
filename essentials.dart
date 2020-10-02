@@ -8,13 +8,13 @@
 import 'package:flutter/material.dart';
 
 //while adding content, call this fxn
-addPadding() {
+Padding addPadding() {
   return Padding(padding: EdgeInsets.only(top: 12.0));
 }
 
 //Pass the title, and message to showAlertDialog and alert Box is yours
 
-showAlertDialog(BuildContext context, String title, String message) {
+void showAlertDialog(BuildContext context, String title, String message) {
   // set up the button
   Widget okButton = FlatButton(
     child: Text("OK"),
@@ -41,7 +41,7 @@ showAlertDialog(BuildContext context, String title, String message) {
 
 //pass list of string in order to validate whether the given field is empty or not
 // useful else than checking field one by one.
-validateFields(List<String> fields) {
+bool validateFields(Map<String, dynamic> fields) {
   for (int i = 0; i < fields.length; i++) {
     if (fields[i].isEmpty) return false;
   }
