@@ -41,7 +41,7 @@ void showAlertDialog(BuildContext context, String title, String message) {
 
 //pass list of string in order to validate whether the given field is empty or not
 // useful else than checking field one by one.
-bool validateFields(Map<String, dynamic> fields) {
+bool validateFields(String fields) {
   for (int i = 0; i < fields.length; i++) {
     if (fields[i].isEmpty) return false;
   }
